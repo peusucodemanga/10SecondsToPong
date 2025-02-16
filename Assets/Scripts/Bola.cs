@@ -3,7 +3,6 @@ using UnityEngine;
 public class Bola : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public GameManager gameManager;
     public float maxAnguloInicio = 0.67f;
     public float maxAnguloColisao = 45f;
     public float velocidadeInicial;
@@ -12,16 +11,15 @@ public class Bola : MonoBehaviour
     private float multiplicadorVelocidade = 1.1f;
     private float inicioX = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InicioPartida();
+        GameManager.instancia.onReset += Reset;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Reset()
     {
-        
+        ResetPosicao();
+        InicioPartida();
     }
 
     private void InicioPartida()
@@ -30,7 +28,7 @@ public class Bola : MonoBehaviour
         pos.y = Random.Range(-maxAnguloInicio, maxAnguloInicio);
         rb.linearVelocity = pos * velocidade;
     }
-    private void ResetBall()
+    private void ResetPosicao()
     {
         float posY = Random.Range(-maxInicioY, maxInicioY);
         Vector2 position = new Vector2(inicioX, posY);
@@ -40,10 +38,15 @@ public class Bola : MonoBehaviour
     {
         Score score = collision.GetComponent<Score>();
         if(score)
+            GameManager.instancia.PontoMarcado(score.id);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Raquete raquete = collision.collider.GetComponent<Raquete>();
+        if(raquete)
         {
-            gameManager.PontoMarcado(score.id);
-            ResetBall();
-            InicioPartida();
+            rb.linearVelocity *= multiplicadorVelocidade;
         }
     }
 }
