@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
             instancia = this;
     }
 
+
     public void PontoMarcado(int id)
     {
         onReset?.Invoke();

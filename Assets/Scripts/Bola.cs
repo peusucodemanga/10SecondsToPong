@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bola : MonoBehaviour
@@ -13,17 +14,19 @@ public class Bola : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(InicioPartida());
         InicioPartida();
         GameManager.instancia.onReset += Reset;
     }
     private void Reset()
     {
         ResetPosicao();
-        InicioPartida();
+        StartCoroutine(InicioPartida());
     }
 
-    private void InicioPartida()
+    private IEnumerator InicioPartida()
     {
+        yield return new WaitForSeconds(3f);
         Vector2 pos = Random.value < 0.5f ? Vector2.left : Vector2.right;
         pos.y = Random.Range(-maxAnguloInicio, maxAnguloInicio);
         rb.linearVelocity = pos * velocidade;
