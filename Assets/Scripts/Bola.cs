@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Bola : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Bola : MonoBehaviour
     public float velocidadeInicial;
     public float velocidade = 1f;
     public float maxInicioY = 4f;
-    private float multiplicadorVelocidade = 1.1f;
+    public float multiplicadorVelocidade = 1.1f;
     private float inicioX = 0f;
 
     void Start()
@@ -18,6 +19,7 @@ public class Bola : MonoBehaviour
     }
     private void Reset()
     {
+        if (this == null) return; 
         ResetPosicao();
         InicioPartida();
     }
@@ -37,8 +39,17 @@ public class Bola : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Score score = collision.GetComponent<Score>();
-        if(score)
+        if (score)
+        {
             GameManager.instancia.PontoMarcado(score.id);
+            StartCoroutine(DestruirDepois());
+        }
+    }
+
+    private IEnumerator DestruirDepois()
+    {
+        yield return new WaitForEndOfFrame(); // Aguarda o reset acontecer
+        GameManager.instancia.RemoverBola(this);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
