@@ -48,7 +48,7 @@ public class Bola : MonoBehaviour
 
     private IEnumerator DestruirDepois()
     {
-        yield return new WaitForEndOfFrame(); // Aguarda o reset acontecer
+        yield return new WaitForEndOfFrame(); 
         GameManager.instancia.RemoverBola(this);
     }
 

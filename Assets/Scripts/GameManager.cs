@@ -23,9 +23,13 @@ public class GameManager : MonoBehaviour
             
     }
 
+    void Start()
+    {
+        StartCoroutine(TvBugadaEvento(new float[]{0.25f}));
+    }
+
     public void CriarNovaBola()
     {
-        ColorBar.enabled=false;
         GameObject novaBola = Instantiate(bolaPrefab, Vector2.zero, Quaternion.identity);
         Bola bolaScript = novaBola.GetComponent<Bola>();
         bolasAtivas.Add(bolaScript);
@@ -33,25 +37,18 @@ public class GameManager : MonoBehaviour
 
     public void TvBugada()
     {
-        StartCoroutine(TvBugadaEvento());
+        StartCoroutine(TvBugadaEvento(new float[]{0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f}));
     }
 
 
-    public IEnumerator TvBugadaEvento()
+    public IEnumerator TvBugadaEvento(float[] interrupcoes)
     {
         ColorBar.enabled = true;
-        yield return new WaitForSeconds(2f); 
-        ColorBar.enabled = false;
-        yield return new WaitForSeconds(1f);
-        ColorBar.enabled = true;
-        yield return new WaitForSeconds(2f);
-        ColorBar.enabled = false;       
-        yield return new WaitForSeconds(1f);
-        ColorBar.enabled = true;
-        yield return new WaitForSeconds(2f);
-        ColorBar.enabled = false;
-        yield return new WaitForSeconds(2f);
-        
+        foreach (float interrupcao in interrupcoes)
+        {
+            yield return new WaitForSeconds(interrupcao);
+            ColorBar.enabled = !ColorBar.enabled;
+        }
     }
     public void RemoverBola(Bola bola)
     {
