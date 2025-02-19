@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Voltando ao menu...");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Tela Inicial");
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void Sair()
