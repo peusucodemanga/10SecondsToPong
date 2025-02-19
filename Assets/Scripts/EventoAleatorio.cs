@@ -26,7 +26,8 @@ public class EventoAleatorio : MonoBehaviour
                 GameManager.instancia.Invoke("CriarNovaBola", 1f);
                 break;
             case 2:
-                Debug.Log("Evento: ");
+                Debug.Log("Evento: Tela de TV ");
+                GameManager.instancia.TvBugada();
                 break;
         }
     }

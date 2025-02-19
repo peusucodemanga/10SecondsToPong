@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Collections;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public ScorePlayers scoreP1, scoreP2;
     public GameObject bolaPrefab; 
 
+    public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>(); 
 
     private void Awake()
@@ -17,15 +19,40 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         else
             instancia = this;
+
+            
     }
 
     public void CriarNovaBola()
     {
+        ColorBar.enabled=false;
         GameObject novaBola = Instantiate(bolaPrefab, Vector2.zero, Quaternion.identity);
         Bola bolaScript = novaBola.GetComponent<Bola>();
         bolasAtivas.Add(bolaScript);
     }
 
+    public void TvBugada()
+    {
+        StartCoroutine(TvBugadaEvento());
+    }
+
+
+    public IEnumerator TvBugadaEvento()
+    {
+        ColorBar.enabled = true;
+        yield return new WaitForSeconds(2f); 
+        ColorBar.enabled = false;
+        yield return new WaitForSeconds(1f);
+        ColorBar.enabled = true;
+        yield return new WaitForSeconds(2f);
+        ColorBar.enabled = false;       
+        yield return new WaitForSeconds(1f);
+        ColorBar.enabled = true;
+        yield return new WaitForSeconds(2f);
+        ColorBar.enabled = false;
+        yield return new WaitForSeconds(2f);
+        
+    }
     public void RemoverBola(Bola bola)
     {
         bolasAtivas.Remove(bola);
