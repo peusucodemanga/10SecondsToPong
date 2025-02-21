@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 509388564}
   - component: {fileID: 509388563}
   m_Layer: 5
-  m_Name: tema
+  m_Name: Tema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2358,8 +2358,9 @@ GameObject:
   - component: {fileID: 1371583270}
   - component: {fileID: 1371583272}
   - component: {fileID: 1371583271}
+  - component: {fileID: 1371583273}
   m_Layer: 5
-  m_Name: legenda
+  m_Name: Legenda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,6 +2423,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371583269}
   m_CullTransparentMesh: 1
+--- !u!114 &1371583273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371583269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a19a370bf8bd984b999a0f92cd7fda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextoLegendaPrefab: {fileID: 8157503604646732939, guid: 607bf0d6c42f63744b4785d9ec05856d, type: 3}
+  duracao: 2
 --- !u!1 &1404073686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7620e93cbf065f40b1b64cb4bff1ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chuvisco: {fileID: 0}
 --- !u!4 &1838267724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5759443137312903274, guid: 42d24b3469b1c1846856a2ca0f8c64d4, type: 3}
@@ -3417,7 +3431,7 @@ GameObject:
   - component: {fileID: 1919384549}
   - component: {fileID: 1919384548}
   m_Layer: 5
-  m_Name: news
+  m_Name: News
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>(); 
+    private Legenda legenda;
 
     private void Awake()
     {
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        legenda = FindFirstObjectByType<Legenda>(); 
+        legenda.CarregarMensagens("padrao");
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -43,12 +46,9 @@ public class GameManager : MonoBehaviour
         ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>(); 
         IniciarJogo();
 
-        if (scene.buildIndex == 1) 
+        if (scene.buildIndex == 1 && ColorBar != null) 
         {
-            if (ColorBar != null)
-            {
-                StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
-            }
+            StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
         }
     }
 
