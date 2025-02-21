@@ -10,7 +10,6 @@ public class Raquete : MonoBehaviour
     private void Start()
     {
         posicaoInicial = transform.position;
-        GameManager.instancia.onReset += Reset;
     }
     private void Reset()
     {

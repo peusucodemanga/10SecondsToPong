@@ -12,22 +12,26 @@ public class EventoAleatorio : MonoBehaviour
 
     void AtivarEvento()
     {
-        int evento = Random.Range(0, 3);
+        int evento = Random.Range(0, 4);
 
         switch (evento)
         {
             case 0:
                 Debug.Log("Evento: 1 bola extra");
-                GameManager.instancia.CriarNovaBola();
+                GameManager.instancia.CriarBolaGolf();
                 break;
             case 1:
                 Debug.Log("Evento: 2 bolas extras");
-                GameManager.instancia.CriarNovaBola();
-                GameManager.instancia.Invoke("CriarNovaBola", 1f);
+                GameManager.instancia.CriarBolaGolf();
+                GameManager.instancia.Invoke("CriarBolaGolf", 1f);
                 break;
             case 2:
-                Debug.Log("Evento: Tela de TV ");
+                Debug.Log("Evento: Tela de TV");
                 GameManager.instancia.TvBugada();
+                break;
+            case 3:
+                Debug.Log("Evento: Pong Classico");
+                SceneController.instancia.MudarParaScene(2, 9f);
                 break;
         }
     }

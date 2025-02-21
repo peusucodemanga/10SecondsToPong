@@ -2,64 +2,111 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
     public System.Action onReset;
     public int pontoP1, pontoP2;
     public ScorePlayers scoreP1, scoreP2;
-    public GameObject bolaPrefab; 
+    public GameObject bola1;
+    public GameObject bola2;
+    public GameObject bola3;
+     private GameObject bolaAtual;
 
     public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>(); 
 
     private void Awake()
     {
-        if (instancia)
-            Destroy(gameObject);
-        else
+        if (instancia == null)
+        {
             instancia = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-            
+        SceneManager.sceneLoaded += OnSceneLoaded; 
     }
 
-    void Start()
+    private void Start()
     {
-        StartCoroutine(TvBugadaEvento(new float[]{0.25f}));
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>(); 
+        IniciarJogo();
+
+        if (scene.buildIndex == 1) 
+        {
+            if (ColorBar != null)
+            {
+                StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
+            }
+        }
+    }
+
+    public void IniciarJogo()
+    {
+        Debug.Log(SceneManager.GetActiveScene().name);
+        SelecionarBola();
+        ResetarPartida();
+        CriarNovaBola();
+    }
+
+    private void SelecionarBola()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (sceneIndex == 1)
+            bolaAtual = bola1;
+        else if (sceneIndex == 2)
+            bolaAtual = bola2;
+        else
+            bolaAtual = bola3;
+    }
+
+    private void ResetarPartida()
+    {
+        foreach (Bola bola in bolasAtivas)
+        {
+            if (bola != null)
+                Destroy(bola.gameObject);
+        }
+        bolasAtivas.Clear();
+
+        onReset?.Invoke(); 
     }
 
     public void CriarNovaBola()
     {
-        GameObject novaBola = Instantiate(bolaPrefab, Vector2.zero, Quaternion.identity);
+        GameObject novaBola = Instantiate(bolaAtual, Vector2.zero, Quaternion.identity);
         Bola bolaScript = novaBola.GetComponent<Bola>();
         bolasAtivas.Add(bolaScript);
     }
 
-    public void TvBugada()
+    public void CriarBolaGolf()
     {
-        StartCoroutine(TvBugadaEvento(new float[]{0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f}));
+        GameObject novaBola = Instantiate(bola3, Vector2.zero, Quaternion.identity);
+        Bola bolaScript = novaBola.GetComponent<Bola>();
+        bolasAtivas.Add(bolaScript);
     }
 
-
-    public IEnumerator TvBugadaEvento(float[] interrupcoes)
-    {
-        ColorBar.enabled = true;
-        foreach (float interrupcao in interrupcoes)
-        {
-            yield return new WaitForSeconds(interrupcao);
-            ColorBar.enabled = !ColorBar.enabled;
-        }
-    }
     public void RemoverBola(Bola bola)
     {
         bolasAtivas.Remove(bola);
+        Destroy(bola.gameObject);
 
         if (bolasAtivas.Count == 0)
         {
-            onReset?.Invoke(); 
-            CriarNovaBola(); 
+            CriarNovaBola();
         }
-        Destroy(bola.gameObject);
     }
 
     public void PontoMarcado(int id)
@@ -69,9 +116,30 @@ public class GameManager : MonoBehaviour
         UpdateScores();
     }
 
-    private void UpdateScores()
+    public void UpdateScores()
     {
         scoreP1.SetScore(pontoP1);
         scoreP2.SetScore(pontoP2);
+    }
+
+    public void ReiniciarJogo()
+    {
+        pontoP1 = pontoP2 = 0;
+        SceneManager.LoadScene(1);
+    }
+
+        public void TvBugada()
+    {
+        StartCoroutine(TvBugadaEvento(new float[]{0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f}));
+    }
+
+    public IEnumerator TvBugadaEvento(float[] interrupcoes)
+    {
+        ColorBar.enabled = true;
+        foreach (float interrupcao in interrupcoes)
+        {
+            yield return new WaitForSeconds(interrupcao);
+            ColorBar.enabled = !ColorBar.enabled;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class botoesTela : MonoBehaviour
 {
     public void comecarJogo(){
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void sairJogo(){

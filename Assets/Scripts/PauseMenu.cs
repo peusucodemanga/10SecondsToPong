@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Reiniciando Partida...");
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.instancia.ReiniciarJogo();
 
     }
 
@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Voltando ao menu...");
         Time.timeScale = 1f;
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void Sair()
