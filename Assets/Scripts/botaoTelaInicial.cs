@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
-using System.Collections.Generic;
 
 public class botoesTela : MonoBehaviour
 {
+
+    void Start()
+    {
+        Time.timeScale=0f;
+    }
     public void comecarJogo(){
         SceneManager.LoadSceneAsync(1);
     }

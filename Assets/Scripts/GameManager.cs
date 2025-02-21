@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
 
     public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>(); 
-    private Legenda legenda;
+
+    
 
     private void Awake()
     {
@@ -35,20 +36,17 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded; 
     }
 
-    private void Start()
-    {
-        legenda = FindFirstObjectByType<Legenda>(); 
-        legenda.CarregarMensagens("padrao");
-    }
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>(); 
         IniciarJogo();
 
-        if (scene.buildIndex == 1 && ColorBar != null) 
+        if (scene.buildIndex == 1) 
         {
-            StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
+            if (ColorBar != null)
+            {
+                StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
+            }
         }
     }
 
@@ -114,6 +112,7 @@ public class GameManager : MonoBehaviour
         if (id == 1) pontoP1++;
         if (id == 2) pontoP2++;
         UpdateScores();
+        Vencedor();
     }
 
     public void UpdateScores()
@@ -141,5 +140,21 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(interrupcao);
             ColorBar.enabled = !ColorBar.enabled;
         }
+    }
+        public void Vencedor()
+    {
+        if(pontoP1 >= 10){
+            
+            PlayerPrefs.SetInt("QGanhou",0);
+            SceneManager.LoadSceneAsync(3);
+        }
+        
+        if(pontoP2 >= 10){
+            
+            PlayerPrefs.SetInt("QGanhou",1);
+            SceneManager.LoadSceneAsync(3);
+            }
+        
+
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a8a59d4f6c2878408c9210892ff264e
+guid: e227e4f7b045dc84cb69c82854fedeed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7277988849528368802
-    second: cronometro1_0
+      213: -3586630021036901077
+    second: "bot\xF5es menu azul4 (2)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cronometro1_0
+      name: "bot\xF5es menu azul4 (2)_0"
       rect:
         serializedVersion: 2
-        x: 249
-        y: 349
-        width: 1302
-        height: 1192
+        x: 89
+        y: 9
+        width: 432
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ae64675c4c900560800000000000000
-      internalID: 7277988849528368802
+      spriteID: b2df757affab93ec0800000000000000
+      internalID: -3586630021036901077
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cronometro1_0: 7277988849528368802
+      "bot\xF5es menu azul4 (2)_0": -3586630021036901077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
