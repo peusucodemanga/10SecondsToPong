@@ -13,7 +13,7 @@ public class EventoAleatorio : MonoBehaviour
     void AtivarEvento()
     {
         legenda = FindFirstObjectByType<Legenda>(); 
-        int evento = Random.Range(0, 4);
+        int evento = Random.Range(0, 5);
 
         switch (evento)
         {
@@ -36,6 +36,11 @@ public class EventoAleatorio : MonoBehaviour
             case 3:
                 Debug.Log("Evento: Pong Classico");
                 SceneController.instancia.MudarParaScene(2, 9f);
+                break;
+
+            case 4:
+                Debug.Log("Evento:BugCentro");
+                GameManager.instancia.BugCentro();
                 break;
         }
     }

@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
 
     public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>(); 
-
     
+    public Image Noise;
 
     private void Awake()
     {
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Player2",0);
         PlayerPrefs.SetInt("Player1",0);
         SceneManager.sceneLoaded += OnSceneLoaded; 
+        Noise.enabled=false;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-        public void TvBugada()
+    public void TvBugada()
     {
         StartCoroutine(TvBugadaEvento(new float[]{0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f}));
     }
@@ -142,6 +143,16 @@ public class GameManager : MonoBehaviour
             ColorBar.enabled = !ColorBar.enabled;
         }
     }
+    public void BugCentro(){
+            StartCoroutine(BugEvento());
+        }
+    
+    public IEnumerator BugEvento(){
+        Noise.enabled=true;
+        yield return new WaitForSeconds(9f);
+        Noise.enabled=false;
+    }
+
         public void Vencedor()
     {
         if(pontoP1 >= 10){
