@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        PlayerPrefs.SetInt("Player2",0);
+        PlayerPrefs.SetInt("Player1",0);
         SceneManager.sceneLoaded += OnSceneLoaded; 
     }
 
@@ -145,13 +146,13 @@ public class GameManager : MonoBehaviour
     {
         if(pontoP1 >= 10){
             
-            PlayerPrefs.SetInt("QGanhou",0);
+            PlayerPrefs.SetInt("Player1",1);
             SceneManager.LoadSceneAsync(3);
         }
         
         if(pontoP2 >= 10){
             
-            PlayerPrefs.SetInt("QGanhou",1);
+            PlayerPrefs.SetInt("Player2",1);
             SceneManager.LoadSceneAsync(3);
             }
         

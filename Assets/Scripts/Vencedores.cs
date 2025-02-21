@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Vencedores : MonoBehaviour
 {
-    public int QGanhou;
+    public int QG1,QG2;
 
     public RawImage P1;
     public RawImage P2;
@@ -14,18 +14,23 @@ public class Vencedores : MonoBehaviour
         Time.timeScale=0f;
     }
     void Start(){
-        QGanhou=PlayerPrefs.GetInt("Qganhou");
+        QG1=PlayerPrefs.GetInt("Player1");
+        QG2=PlayerPrefs.GetInt("Player2");
         Vencedor();
         
 
     }
     public void Vencedor(){
 
-        if(QGanhou==0){
+        if(QG1==1){
             P1.enabled=true;
+            Time.timeScale=0f;
+            Debug.Log("2");
         }
-        if(QGanhou==1){
+        if(QG2==1){
             P2.enabled=true;
+            Time.timeScale=0f;
+            Debug.Log("2");
         }
     }
     public void Reiniciar(){
