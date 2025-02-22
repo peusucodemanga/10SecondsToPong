@@ -23,12 +23,14 @@ public class Vencedores : MonoBehaviour
         if(QG1==1){
             P1.enabled=true;
             Time.timeScale=0f;
-            Debug.Log("2");
+            PlayerPrefs.SetInt("Player1",0);
+            PlayerPrefs.SetInt("Player2",0);
         }
         if(QG2==1){
             P2.enabled=true;
             Time.timeScale=0f;
-            Debug.Log("2");
+            PlayerPrefs.SetInt("Player1",0);
+            PlayerPrefs.SetInt("Player2",0);
         }
     }
     public void Reiniciar(){
