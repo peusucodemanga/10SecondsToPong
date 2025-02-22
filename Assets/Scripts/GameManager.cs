@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Player2", 0);
         PlayerPrefs.SetInt("Player1", 0);
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -138,6 +140,10 @@ public class GameManager : MonoBehaviour
     public void ReiniciarJogo()
     {
         pontoP1 = pontoP2 = 0;
+        EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
+        if (evento){
+            evento.Reiniciar();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -187,11 +193,14 @@ public class GameManager : MonoBehaviour
         if (pontoP1 >= 10)
         {
             PlayerPrefs.SetInt("Player1", 1);
+            ReiniciarJogo();
             SceneManager.LoadSceneAsync(3);
+            
         }
         else if (pontoP2 >= 10)
         {
             PlayerPrefs.SetInt("Player2", 1);
+            ReiniciarJogo();
             SceneManager.LoadSceneAsync(3);
         }
     }

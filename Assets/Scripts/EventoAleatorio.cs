@@ -11,6 +11,13 @@ public class EventoAleatorio : MonoBehaviour
         InvokeRepeating("AtivarEvento", intervalo, intervalo);
     }
 
+    public void Reiniciar(){
+        
+            CancelInvoke("AtivarEvento");
+            InvokeRepeating("AtivarEvento", intervalo, intervalo);
+
+    }
+
     void AtivarEvento()
     {
         legenda = FindFirstObjectByType<Legenda>(); 

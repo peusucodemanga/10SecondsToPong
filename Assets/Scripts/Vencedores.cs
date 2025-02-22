@@ -17,8 +17,6 @@ public class Vencedores : MonoBehaviour
         QG1=PlayerPrefs.GetInt("Player1");
         QG2=PlayerPrefs.GetInt("Player2");
         Vencedor();
-        
-
     }
     public void Vencedor(){
 
@@ -35,6 +33,7 @@ public class Vencedores : MonoBehaviour
     }
     public void Reiniciar(){
         Time.timeScale = 1f; 
+
         SceneManager.LoadScene(1);
     }
     public void Menu(){
