@@ -9,7 +9,8 @@ public class botoesTela : MonoBehaviour
         Time.timeScale=0f;
     }
     public void comecarJogo(){
-        SceneManager.LoadSceneAsync(1);
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(1);
     }
 
     public void sairJogo(){

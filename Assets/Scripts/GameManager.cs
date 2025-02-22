@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
     public GameObject bola1;
     public GameObject bola2;
     public GameObject bola3;
-     private GameObject bolaAtual;
+    private GameObject bolaAtual;
 
     public Image ColorBar;
-    private List<Bola> bolasAtivas = new List<Bola>(); 
-    
+    private List<Bola> bolasAtivas = new List<Bola>();
+
     public Image Noise;
+    
+    private Coroutine bugEventoCoroutine;
 
     private void Awake()
     {
@@ -32,24 +34,34 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        PlayerPrefs.SetInt("Player2",0);
-        PlayerPrefs.SetInt("Player1",0);
-        SceneManager.sceneLoaded += OnSceneLoaded; 
-        Noise.enabled=false;
+        PlayerPrefs.SetInt("Player2", 0);
+        PlayerPrefs.SetInt("Player1", 0);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>(); 
-        IniciarJogo();
+        ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>();
+        Noise = GameObject.Find("Noise")?.GetComponent<Image>();
+        
+        if (ColorBar != null) ColorBar.enabled = false;
+        if (Noise != null) Noise.enabled = false;
 
-        if (scene.buildIndex == 1) 
+        StartCoroutine(PausaAntesDeIniciarJogo());
+
+        if (scene.buildIndex == 1)
         {
             if (ColorBar != null)
             {
-                StartCoroutine(TvBugadaEvento(new float[] {0.25f}));
+                StartCoroutine(TvBugadaEvento(new float[] { 0.25f }));
             }
         }
+    }
+
+    private IEnumerator PausaAntesDeIniciarJogo()
+    {
+        yield return new WaitForSeconds(1f);
+        IniciarJogo();
     }
 
     public void IniciarJogo()
@@ -81,7 +93,7 @@ public class GameManager : MonoBehaviour
         }
         bolasAtivas.Clear();
 
-        onReset?.Invoke(); 
+        onReset?.Invoke();
     }
 
     public void CriarNovaBola()
@@ -119,54 +131,68 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScores()
     {
-        scoreP1.SetScore(pontoP1);
-        scoreP2.SetScore(pontoP2);
+        if (scoreP1 != null) scoreP1.SetScore(pontoP1);
+        if (scoreP2 != null) scoreP2.SetScore(pontoP2);
     }
 
     public void ReiniciarJogo()
     {
         pontoP1 = pontoP2 = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void TvBugada()
     {
-        StartCoroutine(TvBugadaEvento(new float[]{0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f}));
+        StartCoroutine(TvBugadaEvento(new float[] { 0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f }));
     }
 
     public IEnumerator TvBugadaEvento(float[] interrupcoes)
     {
+        if (ColorBar == null)
+            yield break;
+
         ColorBar.enabled = true;
         foreach (float interrupcao in interrupcoes)
         {
             yield return new WaitForSeconds(interrupcao);
             ColorBar.enabled = !ColorBar.enabled;
         }
-    }
-    public void BugCentro(){
-            StartCoroutine(BugEvento());
-        }
-    
-    public IEnumerator BugEvento(){
-        Noise.enabled=true;
-        yield return new WaitForSeconds(9f);
-        Noise.enabled=false;
+        
+        ColorBar.enabled = false;
     }
 
-        public void Vencedor()
+    public void BugCentro()
     {
-        if(pontoP1 >= 10){
-            
-            PlayerPrefs.SetInt("Player1",1);
+        if (bugEventoCoroutine != null)
+        {
+            StopCoroutine(bugEventoCoroutine);
+            bugEventoCoroutine = null;
+        }
+        bugEventoCoroutine = StartCoroutine(BugEvento());
+    }
+
+    public IEnumerator BugEvento()
+    {
+        if (Noise == null)
+            yield break;
+
+        Noise.enabled = true;
+        yield return new WaitForSeconds(9f);
+        Noise.enabled = false;
+        bugEventoCoroutine = null;
+    }
+
+    public void Vencedor()
+    {
+        if (pontoP1 >= 10)
+        {
+            PlayerPrefs.SetInt("Player1", 1);
             SceneManager.LoadSceneAsync(3);
         }
-        
-        if(pontoP2 >= 10){
-            
-            PlayerPrefs.SetInt("Player2",1);
+        else if (pontoP2 >= 10)
+        {
+            PlayerPrefs.SetInt("Player2", 1);
             SceneManager.LoadSceneAsync(3);
-            }
-        
-
+        }
     }
 }

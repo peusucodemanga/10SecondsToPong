@@ -179,6 +179,6 @@ MonoBehaviour:
   maxAnguloInicio: 0.67
   maxAnguloColisao: 45
   velocidadeInicial: 10
-  velocidade: 5
+  velocidade: 6
   maxInicioY: 4
   multiplicadorVelocidade: 1.1

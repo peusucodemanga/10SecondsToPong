@@ -34,7 +34,8 @@ public class Vencedores : MonoBehaviour
         }
     }
     public void Reiniciar(){
-        SceneManager.LoadSceneAsync(1);
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(1);
     }
     public void Menu(){
         SceneManager.LoadSceneAsync(0);
