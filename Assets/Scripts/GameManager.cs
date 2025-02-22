@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private List<Bola> bolasAtivas = new List<Bola>();
 
     public Image Noise;
+
     
     private Coroutine bugEventoCoroutine;
 
