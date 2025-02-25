@@ -48,7 +48,7 @@ public class EventoAleatorio : MonoBehaviour
 
             case 3:
                 Debug.Log("Evento: Pong Classico");
-                SceneController.instancia.MudarParaScene(2, 9f);
+                SceneController.instancia.MudarParaScene(2, 8f);
                 break;
 
             case 4:
@@ -58,7 +58,8 @@ public class EventoAleatorio : MonoBehaviour
                 break;
 
             case 5:
-                Debug.Log("Evento: criancas invadem campo");
+                Debug.Log("Evento: tela preto e branco");
+                EffectManager.instancia.PretoBranco(9f);
                 legenda.CarregarMensagens("case5");
                 break;
         }

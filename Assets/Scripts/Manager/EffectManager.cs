@@ -9,6 +9,7 @@ public class EffectManager : MonoBehaviour
     public Image ColorBar;
     public Image Noise;
     private Coroutine bugEventoCoroutine;
+    public Material PretoEBranco;
 
     private void Awake()
     {
@@ -82,4 +83,16 @@ public class EffectManager : MonoBehaviour
         Noise.enabled = false;
         bugEventoCoroutine = null;
     }
+
+    public void PretoBranco(float tempo)
+    {
+        StartCoroutine(PretoBrancoCoroutine(tempo));
+    }
+
+    private IEnumerator PretoBrancoCoroutine(float tempo)
+    {
+        Camera.main.SetReplacementShader(PretoEBranco.shader, null);
+        yield return new WaitForSeconds(tempo); 
+        Camera.main.ResetReplacementShader();
+    }    
 }

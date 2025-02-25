@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private GameObject bolaAtual;
     private List<Bola> bolasAtivas = new List<Bola>();
     private Legenda legenda;
-    private bool primeiraPartida = false;
+    private bool primeiraPartida = true;
 
     private void Awake()
     {
@@ -54,13 +54,13 @@ public class GameManager : MonoBehaviour
         ResetarPartida();
         CriarNovaBola(bolaAtual);
 
-        if (!primeiraPartida)
+        if (primeiraPartida)
         {
             legenda = FindFirstObjectByType<Legenda>();
             if (legenda)
             {
                 legenda.CarregarMensagens("padrao");
-                primeiraPartida = true;
+                primeiraPartida = false;
             }
         }
     }
@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
 
     public void ReiniciarJogo()
     {
+        primeiraPartida = true;
         pontoP1 = pontoP2 = 0;
         EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
         if (evento){

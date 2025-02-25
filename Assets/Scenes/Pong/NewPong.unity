@@ -1355,7 +1355,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3368,6 +3368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorBar: {fileID: 1071328353}
   Noise: {fileID: 1050240760}
+  PretoEBranco: {fileID: 2100000, guid: 8d8ad45a6cc8dcb4ab7c0c20b57ef390, type: 2}
 --- !u!4 &1838267724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5759443137312903274, guid: 42d24b3469b1c1846856a2ca0f8c64d4, type: 3}
