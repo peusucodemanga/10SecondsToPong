@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,14 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject bola2;
     public GameObject bola3;
     private GameObject bolaAtual;
-
-    public Image ColorBar;
     private List<Bola> bolasAtivas = new List<Bola>();
-
-    public Image Noise;
-
-    
-    private Coroutine bugEventoCoroutine;
+    private Legenda legenda;
+    private bool primeiraPartida = false;
 
     private void Awake()
     {
@@ -38,27 +34,11 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Player2", 0);
         PlayerPrefs.SetInt("Player1", 0);
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>();
-        Noise = GameObject.Find("Noise")?.GetComponent<Image>();
-        
-        if (ColorBar != null) ColorBar.enabled = false;
-        if (Noise != null) Noise.enabled = false;
-
         StartCoroutine(PausaAntesDeIniciarJogo());
-
-        if (scene.buildIndex == 1)
-        {
-            if (ColorBar != null)
-            {
-                StartCoroutine(TvBugadaEvento(new float[] { 0.25f }));
-            }
-        }
     }
 
     private IEnumerator PausaAntesDeIniciarJogo()
@@ -72,7 +52,17 @@ public class GameManager : MonoBehaviour
         Debug.Log(SceneManager.GetActiveScene().name);
         SelecionarBola();
         ResetarPartida();
-        CriarNovaBola();
+        CriarNovaBola(bolaAtual);
+
+        if (!primeiraPartida)
+        {
+            legenda = FindFirstObjectByType<Legenda>();
+            if (legenda)
+            {
+                legenda.CarregarMensagens("padrao");
+                primeiraPartida = true;
+            }
+        }
     }
 
     private void SelecionarBola()
@@ -99,16 +89,9 @@ public class GameManager : MonoBehaviour
         onReset?.Invoke();
     }
 
-    public void CriarNovaBola()
+    public void CriarNovaBola(GameObject bola)
     {
-        GameObject novaBola = Instantiate(bolaAtual, Vector2.zero, Quaternion.identity);
-        Bola bolaScript = novaBola.GetComponent<Bola>();
-        bolasAtivas.Add(bolaScript);
-    }
-
-    public void CriarBolaGolf()
-    {
-        GameObject novaBola = Instantiate(bola3, Vector2.zero, Quaternion.identity);
+        GameObject novaBola = Instantiate(bola, Vector2.zero, Quaternion.identity);
         Bola bolaScript = novaBola.GetComponent<Bola>();
         bolasAtivas.Add(bolaScript);
     }
@@ -120,7 +103,7 @@ public class GameManager : MonoBehaviour
 
         if (bolasAtivas.Count == 0)
         {
-            CriarNovaBola();
+            CriarNovaBola(bolaAtual);
         }
     }
 
@@ -147,48 +130,6 @@ public class GameManager : MonoBehaviour
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void TvBugada()
-    {
-        StartCoroutine(TvBugadaEvento(new float[] { 0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f }));
-    }
-
-    public IEnumerator TvBugadaEvento(float[] interrupcoes)
-    {
-        if (ColorBar == null)
-            yield break;
-
-        ColorBar.enabled = true;
-        foreach (float interrupcao in interrupcoes)
-        {
-            yield return new WaitForSeconds(interrupcao);
-            ColorBar.enabled = !ColorBar.enabled;
-        }
-        
-        ColorBar.enabled = false;
-    }
-
-    public void BugCentro()
-    {
-        if (bugEventoCoroutine != null)
-        {
-            StopCoroutine(bugEventoCoroutine);
-            bugEventoCoroutine = null;
-        }
-        bugEventoCoroutine = StartCoroutine(BugEvento());
-    }
-
-    public IEnumerator BugEvento()
-    {
-        if (Noise == null)
-            yield break;
-
-        Noise.enabled = true;
-        yield return new WaitForSeconds(9f);
-        Noise.enabled = false;
-        bugEventoCoroutine = null;
-    }
-
     public void Vencedor()
     {
         if (pontoP1 >= 10)

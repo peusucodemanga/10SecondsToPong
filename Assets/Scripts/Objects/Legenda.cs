@@ -27,15 +27,13 @@ public class Legenda : MonoBehaviour
             mensagens = new List<string>(arquivo.text.Split('\n')); 
             Debug.Log($"Mensagens carregadas de: {nomeArquivo}");
 
-            ResetarMensagens(); // 🔥 Reset total ao carregar novas mensagens
-
-            // Adiciona todas as mensagens na fila aleatoriamente
+            ResetarMensagens(); 
             EmbaralharMensagens();
             AdicionarTexto(filaMensagens.Dequeue());
         }
         else
         {
-            Debug.LogError($"❌ Arquivo não encontrado: {nomeArquivo}");
+            Debug.LogError($"Arquivo não encontrado: {nomeArquivo}");
         }
     }
 
@@ -55,7 +53,7 @@ public class Legenda : MonoBehaviour
     {
         if (textoAtual != null)
         {
-            Destroy(textoAtual.gameObject); // 🔥 Remove o texto anterior antes de criar um novo
+            Destroy(textoAtual.gameObject); 
         }
 
         textoAtual = Instantiate(TextoLegendaPrefab, transform);
@@ -64,7 +62,7 @@ public class Legenda : MonoBehaviour
 
     void EmbaralharMensagens()
     {
-        filaMensagens.Clear(); // 🔥 Garante que a fila está vazia antes de embaralhar
+        filaMensagens.Clear();
         List<string> tempMensagens = new List<string>(mensagens);
         while (tempMensagens.Count > 0)
         {
@@ -76,10 +74,10 @@ public class Legenda : MonoBehaviour
 
     void ResetarMensagens()
     {
-        filaMensagens.Clear(); // Limpa a fila de mensagens
+        filaMensagens.Clear();
         if (textoAtual != null)
         {
-            Destroy(textoAtual.gameObject); // 🔥 Remove qualquer texto visível na tela
+            Destroy(textoAtual.gameObject);
             textoAtual = null;
         }
     }

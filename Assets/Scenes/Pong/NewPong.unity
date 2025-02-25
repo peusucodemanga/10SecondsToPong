@@ -3285,6 +3285,7 @@ GameObject:
   - component: {fileID: 1801911028}
   - component: {fileID: 1801911029}
   - component: {fileID: 1801911030}
+  - component: {fileID: 1801911032}
   - component: {fileID: 1801911031}
   m_Layer: 0
   m_Name: GameManager
@@ -3327,9 +3328,6 @@ MonoBehaviour:
   bola1: {fileID: 5254029067763236824, guid: b523b2dd84627874a9f1e21ae54da6c2, type: 3}
   bola2: {fileID: 6581705866998292314, guid: a53a9b1f33ed4df4c944c1af5c05f3df, type: 3}
   bola3: {fileID: 5254029067763236824, guid: fc2511ff57a0de542aada961d979f89c, type: 3}
-  ColorBar: {fileID: 1071328353}
-  Noise: {fileID: 1050240760}
-  TrilhaSonora: {fileID: 0}
 --- !u!114 &1801911030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,6 +3341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalo: 10
+  golf: {fileID: 5254029067763236824, guid: fc2511ff57a0de542aada961d979f89c, type: 3}
 --- !u!114 &1801911031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3355,6 +3354,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7620e93cbf065f40b1b64cb4bff1ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1801911032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801911027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90716cffb9db0f942a4bd2ca0de3b8ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorBar: {fileID: 1071328353}
+  Noise: {fileID: 1050240760}
 --- !u!4 &1838267724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5759443137312903274, guid: 42d24b3469b1c1846856a2ca0f8c64d4, type: 3}

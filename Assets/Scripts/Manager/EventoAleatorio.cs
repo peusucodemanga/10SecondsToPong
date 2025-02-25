@@ -5,6 +5,8 @@ public class EventoAleatorio : MonoBehaviour
 {
     public float intervalo = 10f; 
     private Legenda legenda;
+    public GameObject golf;
+    private void aux() => GameManager.instancia.CriarNovaBola(golf);
 
     void Start()
     {
@@ -27,20 +29,20 @@ public class EventoAleatorio : MonoBehaviour
         {
             case 0:
                 Debug.Log("Evento: 1 bola extra");
-                GameManager.instancia.CriarBolaGolf();
+                GameManager.instancia.CriarNovaBola(golf);
                 legenda.CarregarMensagens("case0");
                 break;
 
             case 1:
                 Debug.Log("Evento: 2 bolas extras");
-                GameManager.instancia.CriarBolaGolf();
-                GameManager.instancia.Invoke("CriarBolaGolf", 1f);
+                GameManager.instancia.CriarNovaBola(golf);
+                StartCoroutine(AguardarExecutar(() => GameManager.instancia.CriarNovaBola(golf), 1f));
                 legenda.CarregarMensagens("case1");
                 break;
 
             case 2:
                 Debug.Log("Evento: Tela de TV");
-                GameManager.instancia.TvBugada();
+                EffectManager.instancia.TvBugada(new float[] { 0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f });
                 legenda.CarregarMensagens("case2");
                 break;
 
@@ -51,7 +53,7 @@ public class EventoAleatorio : MonoBehaviour
 
             case 4:
                 Debug.Log("Evento: BugCentro");
-                GameManager.instancia.BugCentro();
+                EffectManager.instancia.BugCentro();
                 legenda.CarregarMensagens("case4");
                 break;
 
@@ -60,5 +62,11 @@ public class EventoAleatorio : MonoBehaviour
                 legenda.CarregarMensagens("case5");
                 break;
         }
+    }
+
+    private IEnumerator AguardarExecutar(System.Action metodo, float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        metodo?.Invoke();
     }
 }
