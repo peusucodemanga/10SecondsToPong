@@ -36,11 +36,11 @@ public class Vencedores : MonoBehaviour
         }
     }
     public void Reiniciar(){
-        Time.timeScale = 1f; 
         EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
             if (evento){
                 evento.Start();
             }
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(1);
     }
     public void Menu(){

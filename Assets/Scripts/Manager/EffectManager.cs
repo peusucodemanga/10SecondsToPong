@@ -11,8 +11,8 @@ public class EffectManager : MonoBehaviour
     public Image ColorBar;
     public Image Noise;
     private Coroutine bugEventoCoroutine;
-    public Volume PretoBranco; 
-    private ColorAdjustments colorAdjustments; 
+    public Volume PretoBranco;
+    private ColorAdjustments colorAdjustments;
 
     private void Awake()
     {
@@ -33,24 +33,14 @@ public class EffectManager : MonoBehaviour
     {
         ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>();
         Noise = GameObject.Find("Noise")?.GetComponent<Image>();
-        PretoBranco = FindFirstObjectByType<Volume>();
-        
+        PretoBranco = GameObject.Find("PretoBranco")?.GetComponent<Volume>();
+
         if (ColorBar != null) ColorBar.enabled = false;
         if (Noise != null) Noise.enabled = false;
-        if (PretoBranco != null && PretoBranco.profile != null)
-        {
-            PretoBranco.profile.TryGet(out colorAdjustments);
-        }
+        if (PretoBranco != null) PretoBranco.enabled = false;
 
-        if (scene.buildIndex == 1)
-        {
-            if (ColorBar != null)
-            {
-                EffectManager.instancia.TvBugada(new float[] { 0.25f });
-            }
-        }
     }
-    
+
     public void TvBugada(float[] interrupcoes)
     {
         StartCoroutine(TvBugadaEvento(interrupcoes));
@@ -67,7 +57,7 @@ public class EffectManager : MonoBehaviour
             yield return new WaitForSeconds(interrupcao);
             ColorBar.enabled = !ColorBar.enabled;
         }
-        
+
         ColorBar.enabled = false;
     }
 
@@ -92,15 +82,18 @@ public class EffectManager : MonoBehaviour
         bugEventoCoroutine = null;
     }
 
-     public void AtivarPretoEBranco(float tempo)
+    public void AtivarPretoEBranco(float tempo)
     {
         StartCoroutine(PretoEBrancoEfeito(tempo));
     }
 
     private IEnumerator PretoEBrancoEfeito(float tempo)
     {
-        colorAdjustments.saturation.value = -100; 
+        if (PretoBranco == null)
+            yield break;
+
+        PretoBranco.enabled = true;
         yield return new WaitForSeconds(tempo);
-        colorAdjustments.saturation.value = 0; 
+        PretoBranco.enabled = false;
     }
 }
