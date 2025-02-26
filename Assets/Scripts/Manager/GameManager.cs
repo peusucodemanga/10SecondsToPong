@@ -137,6 +137,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Player1", 1);
             ReiniciarJogo();
+            EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
+            if (evento){
+                evento.Parar();
+            }
             SceneManager.LoadSceneAsync(3);
             
         }
@@ -144,6 +148,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Player2", 1);
             ReiniciarJogo();
+            EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
+            if (evento){
+                evento.Parar();
+            }
             SceneManager.LoadSceneAsync(3);
         }
     }

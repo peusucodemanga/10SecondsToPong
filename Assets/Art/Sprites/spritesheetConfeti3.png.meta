@@ -1,0 +1,877 @@
+fileFormatVersion: 2
+guid: 280b51a545bec244cb8cdea5f540bc9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8333043007583580601
+    second: spritesheetConfeti3_0
+  - first:
+      213: -853295063216603616
+    second: spritesheetConfeti3_1
+  - first:
+      213: 3617267328646238227
+    second: spritesheetConfeti3_2
+  - first:
+      213: 8680599819106933864
+    second: spritesheetConfeti3_3
+  - first:
+      213: 9084018216595630553
+    second: spritesheetConfeti3_4
+  - first:
+      213: 2267078363006474838
+    second: spritesheetConfeti3_5
+  - first:
+      213: 952536104938849751
+    second: spritesheetConfeti3_6
+  - first:
+      213: -6609862926218556707
+    second: spritesheetConfeti3_7
+  - first:
+      213: 6735775241365018495
+    second: spritesheetConfeti3_8
+  - first:
+      213: 7493650547213611980
+    second: spritesheetConfeti3_9
+  - first:
+      213: 584429518273962732
+    second: spritesheetConfeti3_10
+  - first:
+      213: 3959153781267565906
+    second: spritesheetConfeti3_11
+  - first:
+      213: -5361455460778508301
+    second: spritesheetConfeti3_12
+  - first:
+      213: 3136193010591191836
+    second: spritesheetConfeti3_13
+  - first:
+      213: -6835080609589588389
+    second: spritesheetConfeti3_14
+  - first:
+      213: 755397275283737555
+    second: spritesheetConfeti3_15
+  - first:
+      213: -4612400408690644322
+    second: spritesheetConfeti3_16
+  - first:
+      213: 110724112279781587
+    second: spritesheetConfeti3_17
+  - first:
+      213: -3812638468946305531
+    second: spritesheetConfeti3_18
+  - first:
+      213: 8824551607592554258
+    second: spritesheetConfeti3_19
+  - first:
+      213: 80135982774524184
+    second: spritesheetConfeti3_20
+  - first:
+      213: -3663155920279904930
+    second: spritesheetConfeti3_21
+  - first:
+      213: -4919044758917084791
+    second: spritesheetConfeti3_22
+  - first:
+      213: -8567848724536088343
+    second: spritesheetConfeti3_23
+  - first:
+      213: 7334589520029092393
+    second: spritesheetConfeti3_24
+  - first:
+      213: 1716820593037199730
+    second: spritesheetConfeti3_25
+  - first:
+      213: 4720342482593915670
+    second: spritesheetConfeti3_26
+  - first:
+      213: 5623933902117862488
+    second: spritesheetConfeti3_27
+  - first:
+      213: -8294108959412932691
+    second: spritesheetConfeti3_28
+  - first:
+      213: 4097150090134737445
+    second: spritesheetConfeti3_29
+  - first:
+      213: -6961287974539461220
+    second: spritesheetConfeti3_30
+  - first:
+      213: 7657678064782596430
+    second: spritesheetConfeti3_31
+  - first:
+      213: 1825472788362257370
+    second: spritesheetConfeti3_32
+  - first:
+      213: 7179413638521505610
+    second: spritesheetConfeti3_33
+  - first:
+      213: 5395849262343011563
+    second: spritesheetConfeti3_34
+  - first:
+      213: 7269573265517099184
+    second: spritesheetConfeti3_35
+  - first:
+      213: 3054172489090759813
+    second: spritesheetConfeti3_36
+  - first:
+      213: -8642969265822998729
+    second: spritesheetConfeti3_37
+  - first:
+      213: 7552806490255881923
+    second: spritesheetConfeti3_38
+  - first:
+      213: 692535244674859011
+    second: spritesheetConfeti3_39
+  - first:
+      213: 384438688698188345
+    second: spritesheetConfeti3_40
+  - first:
+      213: 6512264064632864350
+    second: spritesheetConfeti3_41
+  - first:
+      213: 5941239697678693931
+    second: spritesheetConfeti3_42
+  - first:
+      213: 2686875127738670107
+    second: spritesheetConfeti3_43
+  - first:
+      213: 7761492428515334557
+    second: spritesheetConfeti3_44
+  - first:
+      213: 4990720919881216886
+    second: spritesheetConfeti3_45
+  - first:
+      213: 4507101626544825597
+    second: spritesheetConfeti3_46
+  - first:
+      213: 5031926967423423197
+    second: spritesheetConfeti3_47
+  - first:
+      213: -135422811243739572
+    second: spritesheetConfeti3_48
+  - first:
+      213: 7690107046448142726
+    second: spritesheetConfeti3_49
+  - first:
+      213: 3153990904257389520
+    second: spritesheetConfeti3_50
+  - first:
+      213: -5774885109135666672
+    second: spritesheetConfeti3_51
+  - first:
+      213: -6894313962145198483
+    second: spritesheetConfeti3_52
+  - first:
+      213: 4423736467825245929
+    second: spritesheetConfeti3_53
+  - first:
+      213: -6215562384719008890
+    second: spritesheetConfeti3_54
+  - first:
+      213: -1905984076250914534
+    second: spritesheetConfeti3_55
+  - first:
+      213: -7984481737384551317
+    second: spritesheetConfeti3_56
+  - first:
+      213: 1132856376956395192
+    second: spritesheetConfeti3_57
+  - first:
+      213: 7217400690812147737
+    second: spritesheetConfeti3_58
+  - first:
+      213: -5869237805881596229
+    second: spritesheetConfeti3_59
+  - first:
+      213: 7557579689959059938
+    second: spritesheetConfeti3_60
+  - first:
+      213: 4263036923211965713
+    second: spritesheetConfeti3_61
+  - first:
+      213: 3867547388112399942
+    second: spritesheetConfeti3_62
+  - first:
+      213: -7770375025063531644
+    second: spritesheetConfeti3_63
+  - first:
+      213: -7298422630562295383
+    second: spritesheetConfeti3_64
+  - first:
+      213: 464110509392568248
+    second: spritesheetConfeti3_65
+  - first:
+      213: 7135523099083557113
+    second: spritesheetConfeti3_66
+  - first:
+      213: 3074285448024262998
+    second: spritesheetConfeti3_67
+  - first:
+      213: 3394503187854503242
+    second: spritesheetConfeti3_68
+  - first:
+      213: 5709730101046890651
+    second: spritesheetConfeti3_69
+  - first:
+      213: -5436789897831635399
+    second: spritesheetConfeti3_70
+  - first:
+      213: 6794214219986624315
+    second: spritesheetConfeti3_71
+  - first:
+      213: 1156078365233837122
+    second: spritesheetConfeti3_72
+  - first:
+      213: 3396312201250312775
+    second: spritesheetConfeti3_73
+  - first:
+      213: 2765729758273480154
+    second: spritesheetConfeti3_74
+  - first:
+      213: -4279640365372297670
+    second: spritesheetConfeti3_75
+  - first:
+      213: 5532021945759502567
+    second: spritesheetConfeti3_76
+  - first:
+      213: -7725236050277156468
+    second: spritesheetConfeti3_77
+  - first:
+      213: -7989510514625127644
+    second: spritesheetConfeti3_78
+  - first:
+      213: 8536165083354165691
+    second: spritesheetConfeti3_79
+  - first:
+      213: -1931257748547433270
+    second: spritesheetConfeti3_80
+  - first:
+      213: 1069371657608970548
+    second: spritesheetConfeti3_81
+  - first:
+      213: 6506389289601368489
+    second: spritesheetConfeti3_82
+  - first:
+      213: -6954530914945363686
+    second: spritesheetConfeti3_83
+  - first:
+      213: 1060496526754113714
+    second: spritesheetConfeti3_84
+  - first:
+      213: 8146002046996565177
+    second: spritesheetConfeti3_85
+  - first:
+      213: 1846675677702361939
+    second: spritesheetConfeti3_86
+  - first:
+      213: 108388893839283718
+    second: spritesheetConfeti3_87
+  - first:
+      213: -6359154659257891572
+    second: spritesheetConfeti3_88
+  - first:
+      213: 4233902599735308120
+    second: spritesheetConfeti3_89
+  - first:
+      213: -4024624477635892713
+    second: spritesheetConfeti3_90
+  - first:
+      213: 4529134936247150890
+    second: spritesheetConfeti3_91
+  - first:
+      213: -3860039479781208493
+    second: spritesheetConfeti3_92
+  - first:
+      213: -7078603176924657462
+    second: spritesheetConfeti3_93
+  - first:
+      213: -2033578371129884112
+    second: spritesheetConfeti3_94
+  - first:
+      213: -7329322942590479596
+    second: spritesheetConfeti3_95
+  - first:
+      213: 7146492308840937075
+    second: spritesheetConfeti3_96
+  - first:
+      213: 5418696590833676174
+    second: spritesheetConfeti3_97
+  - first:
+      213: -3617506864004027975
+    second: spritesheetConfeti3_98
+  - first:
+      213: -1256402824164552701
+    second: spritesheetConfeti3_99
+  - first:
+      213: -2651145956131319430
+    second: spritesheetConfeti3_100
+  - first:
+      213: 5163120763073095361
+    second: spritesheetConfeti3_101
+  - first:
+      213: -5574123066969191818
+    second: spritesheetConfeti3_102
+  - first:
+      213: -5173641218571104717
+    second: spritesheetConfeti3_103
+  - first:
+      213: -6492871378232769915
+    second: spritesheetConfeti3_104
+  - first:
+      213: -265875608061726568
+    second: spritesheetConfeti3_105
+  - first:
+      213: -5106795921730980638
+    second: spritesheetConfeti3_106
+  - first:
+      213: 3485853603054335064
+    second: spritesheetConfeti3_107
+  - first:
+      213: -2496221944945207318
+    second: spritesheetConfeti3_108
+  - first:
+      213: 8830664615536707289
+    second: spritesheetConfeti3_109
+  - first:
+      213: -9045572140107797212
+    second: spritesheetConfeti3_110
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheetConfeti3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d14c2cb6d9177c4ca894e16716a9082
+      internalID: -1638845412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb27477e42bd0fa4cbd1f5c3eaf821f1
+      internalID: -383677691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772d85a3a9ca93e4bb5bc5edbdc2453b
+      internalID: 1595730293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2197e0868db4a84c9d048379b10ba71
+      internalID: -1822150230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8fcdbf8f151e04fbcf1a51e6b864eb
+      internalID: 308718355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3145880869b547944b2b1d885961b4b0
+      internalID: -1195622256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae277c1d79a57b64190e17b22502812c
+      internalID: -832656846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590b1aa29c75d0d4eb36ba6d971dc489
+      internalID: -2051971849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511e695d1136b044981780284b73250a
+      internalID: 523166017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c333f8439bb1a4ba4ada3fa121b4b2
+      internalID: 543668633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0a5dc874281a84081b93fa4b507141
+      internalID: 1486851718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36f3604d8aeddb4298f7f482afc923a
+      internalID: -1103854020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c74cf944f0bf414ba782dd1880dc60f
+      internalID: 2057570769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1c17070f778c8489693e439938b339
+      internalID: 543984277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a1621bb0146214a8afb16e5a0340d2
+      internalID: 1960360102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfae3394d8e39f4d8daa07f6ec2c8c0
+      internalID: -23337943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42f9f5824563b447a2acf51f0a3eb89
+      internalID: -833715928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti3_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8799ef7065ceecb488c0645ab020c6ae
+      internalID: -2128820115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 46fc8342aa952b342b33ef5fba1ddc1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheetConfeti3_0: -1638845412
+      spritesheetConfeti3_1: -383677691
+      spritesheetConfeti3_10: 1486851718
+      spritesheetConfeti3_11: -1103854020
+      spritesheetConfeti3_12: 2057570769
+      spritesheetConfeti3_13: 543984277
+      spritesheetConfeti3_14: 1960360102
+      spritesheetConfeti3_15: -23337943
+      spritesheetConfeti3_16: -833715928
+      spritesheetConfeti3_17: -2128820115
+      spritesheetConfeti3_2: 1595730293
+      spritesheetConfeti3_3: -1822150230
+      spritesheetConfeti3_4: 308718355
+      spritesheetConfeti3_5: -1195622256
+      spritesheetConfeti3_6: -832656846
+      spritesheetConfeti3_7: -2051971849
+      spritesheetConfeti3_8: 523166017
+      spritesheetConfeti3_9: 543668633
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

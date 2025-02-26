@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 294815db9dec6564993fc05ad0780be3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2467224395348638969
+    second: spritesheetConfeti1_0
+  - first:
+      213: -7693152549894047590
+    second: spritesheetConfeti1_1
+  - first:
+      213: 539273865804055717
+    second: spritesheetConfeti1_2
+  - first:
+      213: 2052392486835019905
+    second: spritesheetConfeti1_3
+  - first:
+      213: -6859791941190003842
+    second: spritesheetConfeti1_4
+  - first:
+      213: 7279240095407023690
+    second: spritesheetConfeti1_5
+  - first:
+      213: -1510664338641774270
+    second: spritesheetConfeti1_6
+  - first:
+      213: 9037112491854987764
+    second: spritesheetConfeti1_7
+  - first:
+      213: -6074696343782944399
+    second: spritesheetConfeti1_8
+  - first:
+      213: -3980218320311585733
+    second: spritesheetConfeti1_9
+  - first:
+      213: 6806561794478880036
+    second: spritesheetConfeti1_10
+  - first:
+      213: 6318116309067423168
+    second: spritesheetConfeti1_11
+  - first:
+      213: 6511410460371539902
+    second: spritesheetConfeti1_12
+  - first:
+      213: -5144104520688063620
+    second: spritesheetConfeti1_13
+  - first:
+      213: -7427774341686093295
+    second: spritesheetConfeti1_14
+  - first:
+      213: 3949526806641050142
+    second: spritesheetConfeti1_15
+  - first:
+      213: 8284962354935307850
+    second: spritesheetConfeti1_16
+  - first:
+      213: 1670860544970977151
+    second: spritesheetConfeti1_17
+  - first:
+      213: 5008294777920021890
+    second: spritesheetConfeti1_18
+  - first:
+      213: 4825766465498248822
+    second: spritesheetConfeti1_19
+  - first:
+      213: -3489138654643151674
+    second: spritesheetConfeti1_20
+  - first:
+      213: 8525280654753013147
+    second: spritesheetConfeti1_21
+  - first:
+      213: -3455630040844835906
+    second: spritesheetConfeti1_22
+  - first:
+      213: -5528523061070352195
+    second: spritesheetConfeti1_23
+  - first:
+      213: -5549035731659982685
+    second: spritesheetConfeti1_24
+  - first:
+      213: -7435224016915851930
+    second: spritesheetConfeti1_25
+  - first:
+      213: 8337983864829949873
+    second: spritesheetConfeti1_26
+  - first:
+      213: -5714535515704093218
+    second: spritesheetConfeti1_27
+  - first:
+      213: -6737876733603506110
+    second: spritesheetConfeti1_28
+  - first:
+      213: 2582823478728864307
+    second: spritesheetConfeti1_29
+  - first:
+      213: -6127852412089702582
+    second: spritesheetConfeti1_30
+  - first:
+      213: 657477198940636930
+    second: spritesheetConfeti1_31
+  - first:
+      213: 384691441621545107
+    second: spritesheetConfeti1_32
+  - first:
+      213: -3223123527162525230
+    second: spritesheetConfeti1_33
+  - first:
+      213: -7363397721982462755
+    second: spritesheetConfeti1_34
+  - first:
+      213: 6402396662889189029
+    second: spritesheetConfeti1_35
+  - first:
+      213: -6482302256631994558
+    second: spritesheetConfeti1_36
+  - first:
+      213: -1635603621638769028
+    second: spritesheetConfeti1_37
+  - first:
+      213: 6621538040602434376
+    second: spritesheetConfeti1_38
+  - first:
+      213: -2639273180953721575
+    second: spritesheetConfeti1_39
+  - first:
+      213: 8634315438928857554
+    second: spritesheetConfeti1_40
+  - first:
+      213: 2947634471749487394
+    second: spritesheetConfeti1_41
+  - first:
+      213: -3367295281232185689
+    second: spritesheetConfeti1_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheetConfeti1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305d628705e556c488110795cf867517
+      internalID: 1210136283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5f64406aa52094881d49f0ecf48324
+      internalID: -1411328155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0e5deb45882744e95682855d85883b
+      internalID: -887381210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4683dd984de254b84ef196b1416952
+      internalID: 1760075713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efb6be7acd61a5469d7ddea84d95ae5
+      internalID: 1721964475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98b7994a61ad9b4199b2215df11c57a
+      internalID: -945434508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0216e098f24b8d4ea01569da752d02d
+      internalID: 719161494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetConfeti1_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87a38f2ecdf6bd4fbcc20cba6c4b738
+      internalID: 1700295584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d488cd51a741deb4594c8b4d853bd654
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheetConfeti1_0: 1210136283
+      spritesheetConfeti1_1: -1411328155
+      spritesheetConfeti1_2: -887381210
+      spritesheetConfeti1_3: 1760075713
+      spritesheetConfeti1_4: 1721964475
+      spritesheetConfeti1_5: -945434508
+      spritesheetConfeti1_6: 719161494
+      spritesheetConfeti1_7: 1700295584
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

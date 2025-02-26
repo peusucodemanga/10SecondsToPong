@@ -6,9 +6,8 @@ public class EventoAleatorio : MonoBehaviour
     public float intervalo = 10f; 
     private Legenda legenda;
     public GameObject golf;
-    private void aux() => GameManager.instancia.CriarNovaBola(golf);
 
-    void Start()
+    public void Start()
     {
         InvokeRepeating("AtivarEvento", intervalo, intervalo);
     }
@@ -17,13 +16,17 @@ public class EventoAleatorio : MonoBehaviour
         
             CancelInvoke("AtivarEvento");
             InvokeRepeating("AtivarEvento", intervalo, intervalo);
+    }
 
+    public void Parar(){
+        
+            CancelInvoke("AtivarEvento");
     }
 
     void AtivarEvento()
     {
         legenda = FindFirstObjectByType<Legenda>(); 
-        int evento = Random.Range(0, 5);
+        int evento = Random.Range(0, 8);
 
         switch (evento)
         {
@@ -59,8 +62,19 @@ public class EventoAleatorio : MonoBehaviour
 
             case 5:
                 Debug.Log("Evento: tela preto e branco");
-                EffectManager.instancia.PretoBranco(9f);
+                EffectManager.instancia.AtivarPretoEBranco(9f);
                 legenda.CarregarMensagens("case5");
+                break;
+
+            case 6:
+                Debug.Log("Evento: tv de tubo");
+                CameraController.instancia.MoverCamera();
+                break;
+
+            case 7:
+                Debug.Log("Evento: tela invertida");
+                CameraController.instancia.Inverter(9f);
+                legenda.CarregarMensagens("case7");
                 break;
         }
     }

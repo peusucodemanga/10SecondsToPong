@@ -14,6 +14,8 @@ public class Vencedores : MonoBehaviour
         Time.timeScale=0f;
     }
     void Start(){
+        Time.timeScale = 1f;
+
         QG1=PlayerPrefs.GetInt("Player1");
         QG2=PlayerPrefs.GetInt("Player2");
         Vencedor();
@@ -22,20 +24,23 @@ public class Vencedores : MonoBehaviour
 
         if(QG1==1){
             P1.enabled=true;
-            Time.timeScale=0f;
+            Time.timeScale=1f;
             PlayerPrefs.SetInt("Player1",0);
             PlayerPrefs.SetInt("Player2",0);
         }
         if(QG2==1){
             P2.enabled=true;
-            Time.timeScale=0f;
+            Time.timeScale=1f;
             PlayerPrefs.SetInt("Player1",0);
             PlayerPrefs.SetInt("Player2",0);
         }
     }
     public void Reiniciar(){
         Time.timeScale = 1f; 
-
+        EventoAleatorio evento = FindFirstObjectByType<EventoAleatorio>();
+            if (evento){
+                evento.Start();
+            }
         SceneManager.LoadScene(1);
     }
     public void Menu(){

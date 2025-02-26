@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class EffectManager : MonoBehaviour
 {
@@ -9,7 +11,8 @@ public class EffectManager : MonoBehaviour
     public Image ColorBar;
     public Image Noise;
     private Coroutine bugEventoCoroutine;
-    public Material PretoEBranco;
+    public Volume PretoBranco; 
+    private ColorAdjustments colorAdjustments; 
 
     private void Awake()
     {
@@ -30,9 +33,14 @@ public class EffectManager : MonoBehaviour
     {
         ColorBar = GameObject.Find("ColorBar")?.GetComponent<Image>();
         Noise = GameObject.Find("Noise")?.GetComponent<Image>();
+        PretoBranco = FindFirstObjectByType<Volume>();
         
         if (ColorBar != null) ColorBar.enabled = false;
         if (Noise != null) Noise.enabled = false;
+        if (PretoBranco != null && PretoBranco.profile != null)
+        {
+            PretoBranco.profile.TryGet(out colorAdjustments);
+        }
 
         if (scene.buildIndex == 1)
         {
@@ -84,15 +92,15 @@ public class EffectManager : MonoBehaviour
         bugEventoCoroutine = null;
     }
 
-    public void PretoBranco(float tempo)
+     public void AtivarPretoEBranco(float tempo)
     {
-        StartCoroutine(PretoBrancoCoroutine(tempo));
+        StartCoroutine(PretoEBrancoEfeito(tempo));
     }
 
-    private IEnumerator PretoBrancoCoroutine(float tempo)
+    private IEnumerator PretoEBrancoEfeito(float tempo)
     {
-        Camera.main.SetReplacementShader(PretoEBranco.shader, null);
-        yield return new WaitForSeconds(tempo); 
-        Camera.main.ResetReplacementShader();
-    }    
+        colorAdjustments.saturation.value = -100; 
+        yield return new WaitForSeconds(tempo);
+        colorAdjustments.saturation.value = 0; 
+    }
 }
