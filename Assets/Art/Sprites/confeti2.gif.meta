@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      confeti2_0: 5962039261483561357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
