@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            
             return;
         }
         PlayerPrefs.SetInt("Player2", 0);
@@ -67,7 +68,6 @@ public class GameManager : MonoBehaviour
     private void SelecionarBola()
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-
         if (sceneIndex == 1)
             bolaAtual = bola1;
         else if (sceneIndex == 2)

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class Bola : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -11,19 +11,27 @@ public class Bola : MonoBehaviour
     public float maxInicioY = 4f;
     public float multiplicadorVelocidade = 1.1f;
     private float inicioX = 0f;
-
+    private string NomeModo;
     void Start()
     {
         InicioPartida();
+        NomeModo = SceneManager.GetActiveScene().name;
         GameManager.instancia.onReset += Reset;
+
     }
     private void Reset()
     {
-        if (this == null) return; 
+        if (this == null) return;
         ResetPosicao();
         InicioPartida();
     }
 
+    void Update()
+    {
+        //Limitando a velocidade
+        if (NomeModo == "EasyPong" && rb.linearVelocity.magnitude > 11f) rb.linearVelocity = rb.linearVelocity.normalized * 11f;
+
+    }
     private void InicioPartida()
     {
         Vector2 pos = Random.value < 0.5f ? Vector2.left : Vector2.right;
@@ -48,14 +56,14 @@ public class Bola : MonoBehaviour
 
     private IEnumerator DestruirDepois()
     {
-        yield return new WaitForEndOfFrame(); 
+        yield return new WaitForEndOfFrame();
         GameManager.instancia.RemoverBola(this);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Raquete raquete = collision.collider.GetComponent<Raquete>();
-        if(raquete)
+        if (raquete)
         {
             rb.linearVelocity *= multiplicadorVelocidade;
         }

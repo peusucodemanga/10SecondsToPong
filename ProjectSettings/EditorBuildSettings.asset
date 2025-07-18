@@ -11,15 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pong/EasyPong.unity
     guid: c99d2f2ba4306a74d8853ec549f92ede
-  - enabled: 0
-    path: Assets/Scenes/Pong/NewPong.unity
-    guid: 00b4a46cc846e63488c51bdfb5c925cc
   - enabled: 1
     path: Assets/Scenes/Pong/ClassicPong.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Vencedores/MenuVencedores.unity
     guid: b22416c9a551b654bb02e57f63a1ca21
+  - enabled: 1
+    path: Assets/Scenes/Pong/HARDPong.unity
+    guid: 00b4a46cc846e63488c51bdfb5c925cc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1,14 +1,18 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventoAleatorio : MonoBehaviour
 {
     public float intervalo = 10f; 
     private Legenda legenda;
     public GameObject golf;
+    private int eventoAnterior=-1;
+    private string NomeModo;
 
     public void Start()
     {
+        NomeModo = SceneManager.GetActiveScene().name;
         InvokeRepeating("AtivarEvento", intervalo, intervalo);
     }
 
@@ -25,10 +29,16 @@ public class EventoAleatorio : MonoBehaviour
 
     void AtivarEvento()
     {
+        int evento;
         legenda = FindFirstObjectByType<Legenda>(); 
         int[] permitidos = { 0, 2, 3, 4, 5, 6}; // excluindo 3 e 5
-        int evento = permitidos[Random.Range(0, permitidos.Length)];
 
+        do
+            if (NomeModo == "EasyPong") evento = permitidos[Random.Range(0, permitidos.Length)];
+            else evento = Random.Range(0, 8); //assume todas os modos possiveis do jogo 
+        while (evento == eventoAnterior);
+
+        eventoAnterior = evento;
         switch (evento)
         {
             case 0:

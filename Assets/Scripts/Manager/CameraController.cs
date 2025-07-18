@@ -13,7 +13,6 @@ public class CameraController : MonoBehaviour
     private float zoomOriginal;
     private Vector3 posicaoOriginal;
 
-    private bool invertida = false;
     public float tempoInvertido = 3f;
 
     void Awake()
@@ -78,12 +77,8 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator InverterPorTempo(float tempo)
     {
-        invertida = true;
         transform.rotation = Quaternion.Euler(0, 0, 180);
-
         yield return new WaitForSeconds(tempo);
-
-        invertida = false;
         transform.rotation = Quaternion.Euler(0, 0, 0); 
     }
 }

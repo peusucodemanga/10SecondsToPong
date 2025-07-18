@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Raquete : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int id;
-    public float velocidadeMovimento = 5f;
+    public float velocidadeMovimento;// = 5f;
     private Vector3 posicaoInicial;
+    private string NomeModo;
+    
 
     private void Start()
     {
         posicaoInicial = transform.position;
+        NomeModo = SceneManager.GetActiveScene().name;
     }
     private void Reset()
     {
@@ -39,6 +43,9 @@ public class Raquete : MonoBehaviour
     }
     private void Mover(float movimento)
     {
+        if (NomeModo == "HARDPong") velocidadeMovimento = 11f;
+        else velocidadeMovimento = 7f;
+
         Vector2 veloc = rb.linearVelocity;
         veloc.y = velocidadeMovimento * movimento;
         rb.linearVelocity = veloc;
