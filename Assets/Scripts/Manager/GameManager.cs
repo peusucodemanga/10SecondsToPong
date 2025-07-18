@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
 
     public void IniciarJogo()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
         SelecionarBola();
         ResetarPartida();
         CriarNovaBola(bolaAtual);

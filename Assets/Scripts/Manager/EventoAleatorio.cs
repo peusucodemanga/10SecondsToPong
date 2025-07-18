@@ -26,53 +26,54 @@ public class EventoAleatorio : MonoBehaviour
     void AtivarEvento()
     {
         legenda = FindFirstObjectByType<Legenda>(); 
-        int evento = Random.Range(0, 8);
+        int[] permitidos = { 0, 2, 3, 4, 5, 6}; // excluindo 3 e 5
+        int evento = permitidos[Random.Range(0, permitidos.Length)];
 
         switch (evento)
         {
             case 0:
-                Debug.Log("Evento: 1 bola extra");
+                //Evento: 1 bola extra
                 GameManager.instancia.CriarNovaBola(golf);
                 legenda.CarregarMensagens("case0");
                 break;
 
             case 1:
-                Debug.Log("Evento: 2 bolas extras");
+                //Evento: 2 bolas extras
                 GameManager.instancia.CriarNovaBola(golf);
                 StartCoroutine(AguardarExecutar(() => GameManager.instancia.CriarNovaBola(golf), 1f));
                 legenda.CarregarMensagens("case1");
                 break;
 
             case 2:
-                Debug.Log("Evento: Tela de TV");
+                //Evento: Tela de TV
                 EffectManager.instancia.TvBugada(new float[] { 0.5f, 2f, 0.5f, 1f, 0.5f, 2f, 0.5f, 1f, 0.5f });
                 legenda.CarregarMensagens("case2");
                 break;
 
             case 3:
-                Debug.Log("Evento: Pong Classico");
+                //Evento: Pong Classico
                 SceneController.instancia.MudarParaScene(2, 8f);
                 break;
 
             case 4:
-                Debug.Log("Evento: BugCentro");
+                //Evento: BugCentro
                 EffectManager.instancia.BugCentro();
                 legenda.CarregarMensagens("case4");
                 break;
 
             case 5:
-                Debug.Log("Evento: tela preto e branco");
+                //Evento: tela preto e branco
                 EffectManager.instancia.AtivarPretoEBranco(9f);
                 legenda.CarregarMensagens("case5");
                 break;
 
             case 6:
-                Debug.Log("Evento: tv de tubo");
+                //Evento: tv de tubo
                 CameraController.instancia.MoverCamera();
                 break;
 
             case 7:
-                Debug.Log("Evento: tela invertida");
+                //Evento: tela invertida
                 CameraController.instancia.Inverter(9f);
                 legenda.CarregarMensagens("case7");
                 break;

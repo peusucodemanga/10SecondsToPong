@@ -25,7 +25,6 @@ public class Legenda : MonoBehaviour
         if (arquivo != null)
         {
             mensagens = new List<string>(arquivo.text.Split('\n')); 
-            Debug.Log($"Mensagens carregadas de: {nomeArquivo}");
 
             ResetarMensagens(); 
             EmbaralharMensagens();
@@ -33,7 +32,6 @@ public class Legenda : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"Arquivo não encontrado: {nomeArquivo}");
         }
     }
 

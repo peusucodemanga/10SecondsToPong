@@ -27,10 +27,12 @@ public class Raquete : MonoBehaviour
         switch (id)
         {
             case 1:
-                movimento = Input.GetAxis("Player1");
+                movimento += Input.GetAxis("Player1");
+                movimento += Input.GetAxis("Player1Joystick");
                 break;
             case 2:
-                movimento = Input.GetAxis("Player2");
+                movimento += Input.GetAxis("Player2");
+                movimento += Input.GetAxis("Player2Joystick");
                 break;
         }
         return movimento;

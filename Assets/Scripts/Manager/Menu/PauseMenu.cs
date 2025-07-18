@@ -17,7 +17,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Continuar()
     {
-        Debug.Log("Continuando jogo...");
         menu.SetActive(false);
         Time.timeScale = 1f;
         pausado = false;
@@ -25,7 +24,6 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        Debug.Log("Pausando jogo...");
         menu.SetActive(true);
         Time.timeScale = 0f;
         pausado = true;
@@ -33,7 +31,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Reiniciar()
     {
-        Debug.Log("Reiniciando Partida...");
         Time.timeScale = 1f;
         GameManager.instancia.ReiniciarJogo();
 
@@ -41,14 +38,12 @@ public class PauseMenu : MonoBehaviour
 
     public void MenuInicial()
     {
-        Debug.Log("Voltando ao menu...");
         Time.timeScale = 1f;
         SceneManager.LoadSceneAsync(0);
     }
 
     public void Sair()
     {
-        Debug.Log("Saindo do jogo...");
         Application.Quit();
     }
 }
