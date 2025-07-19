@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     private void SelecionarBola()
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (sceneIndex == 1)
+        if (sceneIndex == 1 || sceneIndex == 4)
             bolaAtual = bola1;
         else if (sceneIndex == 2)
             bolaAtual = bola2;

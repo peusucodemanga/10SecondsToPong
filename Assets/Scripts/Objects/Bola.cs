@@ -29,7 +29,7 @@ public class Bola : MonoBehaviour
     void Update()
     {
         //Limitando a velocidade
-        if (NomeModo == "EasyPong" && rb.linearVelocity.magnitude > 11f) rb.linearVelocity = rb.linearVelocity.normalized * 11f;
+        if (NomeModo == "EasyPong" && rb.linearVelocity.magnitude > 13f) rb.linearVelocity = rb.linearVelocity.normalized * 13f;
 
     }
     private void InicioPartida()

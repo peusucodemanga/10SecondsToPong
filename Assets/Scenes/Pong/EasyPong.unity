@@ -187,11 +187,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6027972675809004344, guid: b523b2dd84627874a9f1e21ae54da6c2, type: 3}
       propertyPath: velocidade
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6027972675809004344, guid: b523b2dd84627874a9f1e21ae54da6c2, type: 3}
+      propertyPath: velocidadeInicial
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6027972675809004344, guid: b523b2dd84627874a9f1e21ae54da6c2, type: 3}
       propertyPath: multiplicadorVelocidade
-      value: 1.1
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 6839377170924039732, guid: b523b2dd84627874a9f1e21ae54da6c2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -265,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280535595264515939, guid: 19f8770b6a6655a4ca3f42695f2f0d6d, type: 3}
       propertyPath: velocidadeMovimento
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4278619969990524717, guid: 19f8770b6a6655a4ca3f42695f2f0d6d, type: 3}
       propertyPath: m_Sprite
@@ -4758,7 +4762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280535595264515939, guid: 19f8770b6a6655a4ca3f42695f2f0d6d, type: 3}
       propertyPath: velocidadeMovimento
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4278619969990524717, guid: 19f8770b6a6655a4ca3f42695f2f0d6d, type: 3}
       propertyPath: m_Sprite
